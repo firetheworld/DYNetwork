@@ -126,10 +126,6 @@ static dispatch_queue_t ytkrequest_cache_writing_queue() {
         [self requestCompleteFilter];
         YTKRequest *strongSelf = self;
         [strongSelf.delegate requestFinished:strongSelf];
-        if (strongSelf.successCompletionBlock) {
-            strongSelf.successCompletionBlock(strongSelf);
-        }
-        [strongSelf clearCompletionBlock];
     });
 }
 

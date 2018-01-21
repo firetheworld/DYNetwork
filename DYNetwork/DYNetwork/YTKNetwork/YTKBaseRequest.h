@@ -73,8 +73,6 @@ typedef void (^AFURLSessionTaskProgressBlock)(NSProgress *);
 
 @class YTKBaseRequest;
 
-typedef void(^YTKRequestCompletionBlock)(__kindof YTKBaseRequest *request);
-
 ///  The YTKRequestDelegate protocol defines several optional methods you can use
 ///  to receive network-related messages. All the delegate methods will be called
 ///  on the main queue.
@@ -107,13 +105,13 @@ typedef void(^YTKRequestCompletionBlock)(__kindof YTKBaseRequest *request);
 - (void)requestWillStart:(id)request;
 
 ///  Inform the accessory that the request is about to stop. This method is called
-///  before executing `requestFinished` and `successCompletionBlock`.
+///  before executing `requestFinished`
 ///
 ///  @param request The corresponding request.
 - (void)requestWillStop:(id)request;
 
 ///  Inform the accessory that the request has already stoped. This method is called
-///  after executing `requestFinished` and `successCompletionBlock`.
+///  after executing `requestFinished`
 ///
 ///  @param request The corresponding request.
 - (void)requestDidStop:(id)request;
@@ -192,16 +190,6 @@ typedef void(^YTKRequestCompletionBlock)(__kindof YTKBaseRequest *request);
 ///  Default is nil.
 @property (nonatomic, weak, nullable) id<YTKRequestDelegate> delegate;
 
-///  The success callback. Note if this value is not nil and `requestFinished` delegate method is
-///  also implemented, both will be executed but delegate method is first called. This block
-///  will be called on the main queue.
-@property (nonatomic, copy, nullable) YTKRequestCompletionBlock successCompletionBlock;
-
-///  The failure callback. Note if this value is not nil and `requestFailed` delegate method is
-///  also implemented, both will be executed but delegate method is first called. This block
-///  will be called on the main queue.
-@property (nonatomic, copy, nullable) YTKRequestCompletionBlock failureCompletionBlock;
-
 ///  This can be used to add several accossories object. Note if you use `addAccessory` to add acceesory
 ///  this array will be automatically created. Default is nil.
 @property (nonatomic, strong, nullable) NSMutableArray<id<YTKRequestAccessory>> *requestAccessories;
@@ -224,13 +212,6 @@ typedef void(^YTKRequestCompletionBlock)(__kindof YTKBaseRequest *request);
 ///  The priority of the request. Effective only on iOS 8+. Default is `YTKRequestPriorityDefault`.
 @property (nonatomic) YTKRequestPriority requestPriority;
 
-///  Set completion callbacks
-- (void)setCompletionBlockWithSuccess:(nullable YTKRequestCompletionBlock)success
-                              failure:(nullable YTKRequestCompletionBlock)failure;
-
-///  Nil out both success and failure callback blocks.
-- (void)clearCompletionBlock;
-
 ///  Convenience method to add request accessory. See also `requestAccessories`.
 - (void)addAccessory:(id<YTKRequestAccessory>)accessory;
 
@@ -245,10 +226,6 @@ typedef void(^YTKRequestCompletionBlock)(__kindof YTKBaseRequest *request);
 
 ///  Remove self from request queue and cancel the request.
 - (void)stop;
-
-///  Convenience method to start the request with block callbacks.
-- (void)startWithCompletionBlockWithSuccess:(nullable YTKRequestCompletionBlock)success
-                                    failure:(nullable YTKRequestCompletionBlock)failure;
 
 
 #pragma mark - Subclass Override

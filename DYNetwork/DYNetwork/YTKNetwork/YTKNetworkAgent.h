@@ -46,12 +46,15 @@ NS_ASSUME_NONNULL_BEGIN
 ///  Cancel all requests that were previously added.
 - (void)cancelAllRequests;
 
+///  Cancel request in Agent.
+- (void)notifyRequestNeedDealloc:(YTKBaseRequest *)request;
+
 ///  Return the constructed URL of request.
 ///
 ///  @param request The request to parse. Should not be nil.
 ///
 ///  @return The result URL.
-- (NSString *)buildRequestUrl:(YTKBaseRequest *)request;
+//- (NSString *)buildRequestUrl:(YTKBaseRequest *)request;
 
 @end
 

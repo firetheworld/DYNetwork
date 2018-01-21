@@ -24,11 +24,6 @@
 #import <CommonCrypto/CommonDigest.h>
 #import "YTKNetworkPrivate.h"
 
-#if __has_include(<AFNetworking/AFNetworking.h>)
-#import <AFNetworking/AFURLRequestSerialization.h>
-#else
-#import "AFURLRequestSerialization.h"
-#endif
 
 void YTKLog(NSString *format, ...) {
 #ifdef DEBUG

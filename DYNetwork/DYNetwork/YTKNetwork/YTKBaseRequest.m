@@ -25,12 +25,6 @@
 #import "YTKNetworkAgent.h"
 #import "YTKNetworkPrivate.h"
 
-#if __has_include(<AFNetworking/AFNetworking.h>)
-#import <AFNetworking/AFNetworking.h>
-#else
-#import "AFNetworking.h"
-#endif
-
 NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validation";
 
 @interface YTKBaseRequest ()
@@ -84,18 +78,6 @@ NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validat
 
 #pragma mark - Request Configuration
 
-- (void)setCompletionBlockWithSuccess:(YTKRequestCompletionBlock)success
-                              failure:(YTKRequestCompletionBlock)failure {
-    self.successCompletionBlock = success;
-    self.failureCompletionBlock = failure;
-}
-
-- (void)clearCompletionBlock {
-    // nil out to break the retain cycle.
-    self.successCompletionBlock = nil;
-    self.failureCompletionBlock = nil;
-}
-
 - (void)addAccessory:(id<YTKRequestAccessory>)accessory {
     if (!self.requestAccessories) {
         self.requestAccessories = [NSMutableArray array];
@@ -115,12 +97,6 @@ NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validat
     self.delegate = nil;
     [[YTKNetworkAgent sharedAgent] cancelRequest:self];
     [self toggleAccessoriesDidStopCallBack];
-}
-
-- (void)startWithCompletionBlockWithSuccess:(YTKRequestCompletionBlock)success
-                                    failure:(YTKRequestCompletionBlock)failure {
-    [self setCompletionBlockWithSuccess:success failure:failure];
-    [self start];
 }
 
 #pragma mark - Subclass Override
