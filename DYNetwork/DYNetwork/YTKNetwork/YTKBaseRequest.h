@@ -227,7 +227,6 @@ typedef void (^AFURLSessionTaskProgressBlock)(NSProgress *);
 ///  Remove self from request queue and cancel the request.
 - (void)stop;
 
-
 #pragma mark - Subclass Override
 ///=============================================================================
 /// @name Subclass Override

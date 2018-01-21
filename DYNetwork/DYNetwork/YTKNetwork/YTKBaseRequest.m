@@ -40,6 +40,10 @@ NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validat
 
 @implementation YTKBaseRequest
 
+- (void)dealloc {
+	NSLog(@"YTKBaseRequest dealloc:%@",self);
+}
+
 #pragma mark - Request and Response Information
 
 - (NSHTTPURLResponse *)response {

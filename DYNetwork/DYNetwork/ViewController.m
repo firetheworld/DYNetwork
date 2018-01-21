@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NextViewController.h"
 
 @interface ViewController ()
 
@@ -25,5 +26,9 @@
 	// Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonClicked:(UIButton *)sender {
+	NextViewController *vc = [[NextViewController alloc] init];
+	[self.navigationController pushViewController:vc animated:YES];
+}
 
 @end

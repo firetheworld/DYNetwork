@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "YTKNetworkConfig.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
+	YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
+	config.baseUrl = @"https://free-api.heweather.com";
 	return YES;
 }
 

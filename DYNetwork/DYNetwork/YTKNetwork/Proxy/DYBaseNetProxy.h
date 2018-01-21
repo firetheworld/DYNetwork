@@ -10,9 +10,6 @@
 #import "YTKBaseRequest.h"
 #import "YTKNetworkConfig.h"
 
-typedef void(^HandleRequestResult)(NSURLSessionTask *task, id responseObject, NSError *error);
-
-
 @protocol DYBaseNetProxyDelegate <NSObject>
 
 @required
@@ -23,10 +20,7 @@ typedef void(^HandleRequestResult)(NSURLSessionTask *task, id responseObject, NS
 @interface DYBaseNetProxy : NSObject <DYBaseNetProxyDelegate>
 
 @property (nonatomic, weak) id<DYBaseNetProxyDelegate> delegate;
-@property (nonatomic, strong) HandleRequestResult completeBlock;
 @property (nonatomic, strong) YTKNetworkConfig *config;
-
-- (void)setCompleteBlock:(HandleRequestResult)block;
 
 - (id)getResonsePbject;
 

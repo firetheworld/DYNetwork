@@ -18,9 +18,11 @@
 		4685AA8D2014881C0083DFAF /* YTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4685AA812014881B0083DFAF /* YTKBaseRequest.m */; };
 		4685AA8F2014881C0083DFAF /* YTKNetworkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4685AA852014881B0083DFAF /* YTKNetworkAgent.m */; };
 		4685AA922014881C0083DFAF /* YTKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4685AA892014881B0083DFAF /* YTKRequest.m */; };
-		46BAFFA120148C2E00821AA0 /* DYBaseNetProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFFA020148C2E00821AA0 /* DYBaseNetProxy.m */; };
-		46BAFFA420148C8300821AA0 /* DYANFNetProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFFA320148C8300821AA0 /* DYANFNetProxy.m */; };
-		46BAFFA72014950C00821AA0 /* DYProxyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFFA62014950C00821AA0 /* DYProxyManager.m */; };
+		46BAFFAA2014C07200821AA0 /* TestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFFA92014C07200821AA0 /* TestApi.m */; };
+		46BAFFAD2014C48700821AA0 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFFAC2014C48700821AA0 /* NextViewController.m */; };
+		46BAFFB52014D1E800821AA0 /* DYProxyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFFB02014D1E800821AA0 /* DYProxyManager.m */; };
+		46BAFFB62014D1E800821AA0 /* DYANFNetProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFFB32014D1E800821AA0 /* DYANFNetProxy.m */; };
+		46BAFFB72014D1E800821AA0 /* DYBaseNetProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFFB42014D1E800821AA0 /* DYBaseNetProxy.m */; };
 		4E4A9A6F800D2CBFA9F90F30 /* libPods-DYNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB97931594EAAFAE151A3ECC /* libPods-DYNetwork.a */; };
 /* End PBXBuildFile section */
 
@@ -46,12 +48,16 @@
 		4685AA852014881B0083DFAF /* YTKNetworkAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkAgent.m; sourceTree = "<group>"; };
 		4685AA882014881B0083DFAF /* YTKNetworkPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkPrivate.h; sourceTree = "<group>"; };
 		4685AA892014881B0083DFAF /* YTKRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKRequest.m; sourceTree = "<group>"; };
-		46BAFF9F20148C2E00821AA0 /* DYBaseNetProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYBaseNetProxy.h; sourceTree = "<group>"; };
-		46BAFFA020148C2E00821AA0 /* DYBaseNetProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYBaseNetProxy.m; sourceTree = "<group>"; };
-		46BAFFA220148C8300821AA0 /* DYANFNetProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYANFNetProxy.h; sourceTree = "<group>"; };
-		46BAFFA320148C8300821AA0 /* DYANFNetProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYANFNetProxy.m; sourceTree = "<group>"; };
-		46BAFFA52014950C00821AA0 /* DYProxyManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYProxyManager.h; sourceTree = "<group>"; };
-		46BAFFA62014950C00821AA0 /* DYProxyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYProxyManager.m; sourceTree = "<group>"; };
+		46BAFFA82014C07200821AA0 /* TestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestApi.h; sourceTree = "<group>"; };
+		46BAFFA92014C07200821AA0 /* TestApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestApi.m; sourceTree = "<group>"; };
+		46BAFFAB2014C48700821AA0 /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		46BAFFAC2014C48700821AA0 /* NextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
+		46BAFFAF2014D1E800821AA0 /* DYANFNetProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYANFNetProxy.h; sourceTree = "<group>"; };
+		46BAFFB02014D1E800821AA0 /* DYProxyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYProxyManager.m; sourceTree = "<group>"; };
+		46BAFFB12014D1E800821AA0 /* DYBaseNetProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYBaseNetProxy.h; sourceTree = "<group>"; };
+		46BAFFB22014D1E800821AA0 /* DYProxyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYProxyManager.h; sourceTree = "<group>"; };
+		46BAFFB32014D1E800821AA0 /* DYANFNetProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYANFNetProxy.m; sourceTree = "<group>"; };
+		46BAFFB42014D1E800821AA0 /* DYBaseNetProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYBaseNetProxy.m; sourceTree = "<group>"; };
 		A18803D75A71D5616D9FDB53 /* Pods-DYNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYNetwork/Pods-DYNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		DB97931594EAAFAE151A3ECC /* libPods-DYNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DYNetwork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CA909E407871667A41FA2E /* Pods-DYNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYNetwork/Pods-DYNetwork.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +118,10 @@
 				4685AA61201487600083DFAF /* AppDelegate.m */,
 				4685AA63201487600083DFAF /* ViewController.h */,
 				4685AA64201487600083DFAF /* ViewController.m */,
+				46BAFFAB2014C48700821AA0 /* NextViewController.h */,
+				46BAFFAC2014C48700821AA0 /* NextViewController.m */,
+				46BAFFA82014C07200821AA0 /* TestApi.h */,
+				46BAFFA92014C07200821AA0 /* TestApi.m */,
 				4685AA66201487600083DFAF /* Main.storyboard */,
 				4685AA69201487600083DFAF /* Assets.xcassets */,
 				4685AA6B201487600083DFAF /* LaunchScreen.storyboard */,
@@ -124,6 +134,7 @@
 		4685AA762014881B0083DFAF /* YTKNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				46BAFFAE2014D1E800821AA0 /* Proxy */,
 				4685AA7A2014881B0083DFAF /* YTKNetwork.h */,
 				4685AA822014881B0083DFAF /* YTKNetworkConfig.h */,
 				4685AA772014881B0083DFAF /* YTKNetworkConfig.m */,
@@ -135,14 +146,21 @@
 				4685AA7D2014881B0083DFAF /* YTKNetworkPrivate.m */,
 				4685AA7E2014881B0083DFAF /* YTKRequest.h */,
 				4685AA892014881B0083DFAF /* YTKRequest.m */,
-				46BAFF9F20148C2E00821AA0 /* DYBaseNetProxy.h */,
-				46BAFFA020148C2E00821AA0 /* DYBaseNetProxy.m */,
-				46BAFFA220148C8300821AA0 /* DYANFNetProxy.h */,
-				46BAFFA320148C8300821AA0 /* DYANFNetProxy.m */,
-				46BAFFA52014950C00821AA0 /* DYProxyManager.h */,
-				46BAFFA62014950C00821AA0 /* DYProxyManager.m */,
 			);
 			path = YTKNetwork;
+			sourceTree = "<group>";
+		};
+		46BAFFAE2014D1E800821AA0 /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				46BAFFB22014D1E800821AA0 /* DYProxyManager.h */,
+				46BAFFB02014D1E800821AA0 /* DYProxyManager.m */,
+				46BAFFAF2014D1E800821AA0 /* DYANFNetProxy.h */,
+				46BAFFB32014D1E800821AA0 /* DYANFNetProxy.m */,
+				46BAFFB12014D1E800821AA0 /* DYBaseNetProxy.h */,
+				46BAFFB42014D1E800821AA0 /* DYBaseNetProxy.m */,
+			);
+			path = Proxy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,17 +285,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BAFFB72014D1E800821AA0 /* DYBaseNetProxy.m in Sources */,
 				4685AA65201487600083DFAF /* ViewController.m in Sources */,
+				46BAFFB62014D1E800821AA0 /* DYANFNetProxy.m in Sources */,
 				4685AA8F2014881C0083DFAF /* YTKNetworkAgent.m in Sources */,
 				4685AA8C2014881C0083DFAF /* YTKNetworkPrivate.m in Sources */,
 				4685AA8A2014881C0083DFAF /* YTKNetworkConfig.m in Sources */,
+				46BAFFAD2014C48700821AA0 /* NextViewController.m in Sources */,
 				4685AA922014881C0083DFAF /* YTKRequest.m in Sources */,
 				4685AA8D2014881C0083DFAF /* YTKBaseRequest.m in Sources */,
+				46BAFFAA2014C07200821AA0 /* TestApi.m in Sources */,
 				4685AA70201487600083DFAF /* main.m in Sources */,
-				46BAFFA420148C8300821AA0 /* DYANFNetProxy.m in Sources */,
+				46BAFFB52014D1E800821AA0 /* DYProxyManager.m in Sources */,
 				4685AA62201487600083DFAF /* AppDelegate.m in Sources */,
-				46BAFFA72014950C00821AA0 /* DYProxyManager.m in Sources */,
-				46BAFFA120148C2E00821AA0 /* DYBaseNetProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

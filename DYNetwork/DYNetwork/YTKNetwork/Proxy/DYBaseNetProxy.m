@@ -32,10 +32,10 @@
 		return detailUrl;
 	}
 	// Filter URL if needed
-//	NSArray *filters = [_config urlFilters];
-//	for (id<YTKUrlFilterProtocol> f in filters) {
-//		detailUrl = [f filterUrl:detailUrl withRequest:request];
-//	}
+	NSArray *filters = [_config urlFilters];
+	for (id<YTKUrlFilterProtocol> f in filters) {
+		detailUrl = [f filterUrl:detailUrl withRequest:request];
+	}
 	
 	NSString *baseUrl;
 	if ([request useCDN]) {
@@ -61,7 +61,12 @@
 	return [NSURL URLWithString:detailUrl relativeToURL:url].absoluteString;
 }
 
+#pragma mark - Subclass override
 - (NSURLSessionTask *)sessionTaskForRequest:(YTKBaseRequest *)request error:(NSError * _Nullable __autoreleasing *)error {
+	return nil;
+}
+
+- (id)getResonsePbject {
 	return nil;
 }
 
