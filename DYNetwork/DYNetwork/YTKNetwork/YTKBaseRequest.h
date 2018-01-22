@@ -150,19 +150,12 @@ typedef void (^AFURLSessionTaskProgressBlock)(NSProgress *);
 ///  The raw data representation of response. Note this value can be nil if request failed.
 @property (nonatomic, strong, readonly, nullable) NSData *responseData;
 
-///  The string representation of response. Note this value can be nil if request failed.
-@property (nonatomic, strong, readonly, nullable) NSString *responseString;
-
 ///  This serialized response object. The actual type of this object is determined by
 ///  `YTKResponseSerializerType`. Note this value can be nil if request failed.
 ///
 ///  @discussion If `resumableDownloadPath` and DownloadTask is using, this value will
 ///              be the path to which file is successfully saved (NSURL), or nil if request failed.
 @property (nonatomic, strong, readonly, nullable) id responseObject;
-
-///  If you use `YTKResponseSerializerTypeJSON`, this is a convenience (and sematic) getter
-///  for the response object. Otherwise this value is nil.
-@property (nonatomic, strong, readonly, nullable) id responseJSONObject;
 
 ///  This error can be either serialization error or network error. If nothing wrong happens
 ///  this value will be nil.

@@ -280,7 +280,15 @@ static const NSString* mockErrorKey = @"error";
 	//
 	// Here we choose to completely ignore cancelled tasks. Neither success or failure
 	// callback will be called.
-	if (!request || !request.delegate) {
+	if (!request) {
+		return;
+	}
+	
+	// If request.delegate is nil, just cancel this request
+	if (!request.delegate) {
+		dispatch_async(dispatch_get_main_queue(), ^{
+			[self removeRequestFromRecord:request];
+		});
 		return;
 	}
 	
@@ -295,8 +303,7 @@ static const NSString* mockErrorKey = @"error";
 	request.responseObject = responseObject;
 	if ([request.responseObject isKindOfClass:[NSData class]]) {
 		request.responseData = responseObject;
-		request.responseString = [[NSString alloc] initWithData:responseObject encoding:[YTKNetworkUtils stringEncodingWithRequest:request]];
-		request.responseObject = [_proxy getResonsePbject];
+		request.responseObject = [_proxy getResonseObject];
 	}
 	if (error) {
 		succeed = NO;

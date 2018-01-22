@@ -22,7 +22,7 @@
 @property (nonatomic, weak) id<DYBaseNetProxyDelegate> delegate;
 @property (nonatomic, strong) YTKNetworkConfig *config;
 
-- (id)getResonsePbject;
+- (id)getResonseObject;
 
 - (NSString *)buildRequestUrl:(YTKBaseRequest *)request;
 

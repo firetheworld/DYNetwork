@@ -6,7 +6,6 @@
 //  Copyright © 2018年 flame. All rights reserved.
 //
 
-#import <AFNetworking/AFNetworking.h>
 #import "DYBaseNetProxy.h"
 
 @interface DYANFNetProxy : DYBaseNetProxy
