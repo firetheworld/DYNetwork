@@ -128,11 +128,7 @@
 	dataTask = [_manager dataTaskWithRequest:request
 						   completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *_error) {
 							   if ([self.delegate respondsToSelector:@selector(handleRequestResult:responseObject:error:)]) {
-//								   [self.delegate handleRequestResult:dataTask responseObject:responseObject error:_error];
-								   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-									   [self.delegate handleRequestResult:dataTask responseObject:responseObject error:_error];
-
-								   });
+								   [self.delegate handleRequestResult:dataTask responseObject:responseObject error:_error];
 							   }
 						   }];
 

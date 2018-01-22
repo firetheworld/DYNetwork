@@ -182,6 +182,14 @@ NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validat
     return (statusCode >= 200 && statusCode <= 299);
 }
 
+- (id)mockData {
+	return nil;
+}
+
+- (NSInteger)mockDelay {
+	return 2;
+}
+
 #pragma mark - NSObject
 
 - (NSString *)description {

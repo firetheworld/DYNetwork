@@ -308,6 +308,12 @@ typedef void (^AFURLSessionTaskProgressBlock)(NSProgress *);
 ///  This validator will be used to test if `responseStatusCode` is valid.
 - (BOOL)statusCodeValidator;
 
+///  This mockData will be return to bussiness after mockDelay(default 2s) time.
+- (id)mockData;
+
+///  mock will delay this time.
+- (NSInteger)mockDelay;
+
 @end
 
 NS_ASSUME_NONNULL_END

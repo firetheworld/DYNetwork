@@ -33,6 +33,9 @@
 
 #define kYTKNetworkIncompleteDownloadFolderName @"Incomplete"
 
+static const NSString* mockResultKey = @"result";
+static const NSString* mockErrorKey = @"error";
+
 @interface YTKNetworkAgent () <DYBaseNetProxyDelegate>
 
 @end
@@ -73,6 +76,14 @@
     NSParameterAssert(request != nil);
 
     NSError * __autoreleasing requestSerializationError = nil;
+	
+	// mock Data
+	id mockData = [request mockData];
+	if (mockData) {
+		[self handleMockData:request];
+		return;
+	}
+	
 	request.requestTask = [_proxy sessionTaskForRequest:request error:&requestSerializationError];
 
     if (requestSerializationError) {
@@ -174,10 +185,6 @@
 	Unlock();
 }
 
-- (void)notifyRequestNeedDealloc:(YTKBaseRequest *)request {
-	[self removeRequestFromRecord:request];
-}
-
 #pragma mark - Deal Call Back
 - (void)requestDidSucceedWithRequest:(YTKBaseRequest *)request {
 	@autoreleasepool {
@@ -230,6 +237,37 @@
 		[request toggleAccessoriesDidStopCallBack];
 	});
 }
+
+#pragma mark - Mock
+- (void)handleMockData:(YTKBaseRequest *)request {
+	id mockData = [request mockData];
+	NSInteger delayTime = [request mockDelay];
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+		if (request.delegate) {
+			// if offer NSDictionary
+			// get key 'result'
+			// get key 'error'
+			if ([mockData isKindOfClass:[NSDictionary class]]) {
+				id result = mockData[mockResultKey];
+				if (result) {
+					request.responseObject = result;
+					[self requestDidSucceedWithRequest:request];
+				} else {
+					id error = mockData[mockErrorKey];
+					request.error = error;
+					[self requestDidFailWithRequest:request error:error];
+				}
+			}
+			else {
+				// do nothing
+			}
+		}
+		else {
+			// do nothing
+		}
+	});
+}
+
 
 #pragma mark - DYBaseNetProxyDelegate
 - (void)handleRequestResult:(NSURLSessionTask *)task responseObject:(id)responseObject error:(NSError *)error {

@@ -24,4 +24,8 @@
 	return [NSString stringWithFormat:@"/s6/weather/forecast?location=%@",_location];
 }
 
+- (id)mockData {
+	return @{@"result": @"this is a mock result"};
+}
+
 @end
